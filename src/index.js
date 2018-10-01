@@ -1,1 +1,83 @@
-export default 'Welcome to screenshotlib'
+import "whatwg-fetch";
+import absolutify from "absolutify";
+
+const removeStyles = node => {
+  const r = node.getElementsByTagName("link");
+  for (var i = r.length - 1; i >= 0; i--) {
+    r[i].parentNode.removeChild(r[i]);
+  }
+  return node;
+};
+
+const removeScripts = node => {
+  const r = node.getElementsByTagName("script");
+  for (var i = r.length - 1; i >= 0; i--) {
+    r[i].parentNode.removeChild(r[i]);
+  }
+  return node;
+};
+
+const removeHref = node => {
+  const r = node.getElementsByTagName("a");
+  for (var i = r.length - 1; i >= 0; i--) {
+    r[i].removeAttribute("href");
+  }
+  return node;
+};
+
+const cloneDocument = () => {
+  const documentClone = document.cloneNode(true);
+  const styles = convertStyleSheetToCss(document);
+  const newDocument = removeHref(removeStyles(removeScripts(documentClone)))
+    .documentElement;
+  appendToHead(newDocument, styleTag(styles));
+  const origin = window.location.origin;
+  const htmlString = absolutify(newDocument.innerHTML, origin);
+  return htmlString;
+};
+
+const convertStyleSheetToCss = doc => {
+  var docStyle = "";
+  const styleSheetCount = doc.styleSheets.length;
+  const styleSheets = doc.styleSheets;
+  for (var i = 0; i < styleSheetCount; i++) {
+    let cssRules = styleSheets[i].rules;
+    let cssRulesLength = cssRules.length;
+    for (var j = 0; j < cssRulesLength; j++) {
+      docStyle += cssRules[j].cssText;
+    }
+  }
+  return docStyle;
+};
+
+const styleTag = styles => {
+  const css = document.createElement("style");
+  css.type = "text/css";
+  css.appendChild(document.createTextNode(styles));
+  return css;
+};
+
+const appendToHead = (doc, node) => {
+  doc.getElementsByTagName("head")[1].appendChild(node);
+};
+
+const puppeterScreenshot = (url, data) =>
+  fetch(url, {
+    method: "POST",
+    mode: "cors",
+    cache: "default",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  }).then(response => {
+    return response.blob();
+  });
+
+const screenshotlib = params => {
+  const { url } = params;
+  const doc = documentClone();
+  return puppeterScreenshot(url, doc);
+};
+
+export default screenshotlib;
