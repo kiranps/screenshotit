@@ -14,6 +14,7 @@
     "clean": "nwb clean-module",
     "prepublishOnly": "npm run build",
     "test": "nwb test",
+    "demo": "nwb web run demo/app.js --webpack.html.template='./demo/public/index.html'",
     "test:coverage": "nwb test --coverage",
     "test:watch": "nwb test --server"
   },
@@ -28,5 +29,8 @@
   "author": "",
   "homepage": "",
   "license": "MIT",
-  "repository": ""
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  }
 }

@@ -58,7 +58,8 @@ const styleTag = styles => {
 };
 
 const appendToHead = (doc, node) => {
-  doc.getElementsByTagName("head")[1].appendChild(node);
+  console.log(doc);
+  doc.getElementsByTagName("head")[0].appendChild(node);
 };
 
 const puppeterScreenshot = (url, data) =>
@@ -76,8 +77,20 @@ const puppeterScreenshot = (url, data) =>
 
 const screenshotlib = params => {
   const { url } = params;
-  const doc = documentClone();
-  return puppeterScreenshot(url, doc);
+  const windowHeight = window.innerHeight;
+  const windowWidth = window.innerWidth;
+  const documentHeight = document.body.scrollHeight;
+  const documentWidth = document.body.scrollWidth;
+  const height = windowHeight > documentHeight ? windowHeight : documentHeight;
+  const width = documentWidth;
+  const doc = cloneDocument();
+  const data = {
+    html: doc,
+    height,
+    width
+  };
+
+  return puppeterScreenshot(url, data);
 };
 
 export default screenshotlib;

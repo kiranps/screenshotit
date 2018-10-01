@@ -1,0 +1,8 @@
+.*.swp
+.git
+.npmrc
+npm-debug.log
+.vscode
+.travis.yml
+demo/
+nwb.config.js
