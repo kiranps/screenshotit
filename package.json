@@ -14,7 +14,7 @@
     "clean": "nwb clean-module",
     "prepublishOnly": "npm run build",
     "test": "nwb test",
-    "demo": "nwb web run demo/app.js --webpack.html.template='./demo/public/index.html'",
+    "serve-demo": "nwb web run ./demo/src/index.js --config ./demo/nwb.config.js --port 3003",
     "test:coverage": "nwb test --coverage",
     "test:watch": "nwb test --server"
   },
