@@ -19,7 +19,6 @@
     "test:watch": "nwb test --server"
   },
   "dependencies": {
-    "absolutify": "^0.1.0",
     "promise-polyfill": "8.1.0",
     "whatwg-fetch": "^3.0.0"
   },

@@ -1,5 +1,5 @@
 import "whatwg-fetch";
-import absolutify from "absolutify";
+import absolutify from "./absolutify";
 
 const removeStyles = node => {
   const r = node.getElementsByTagName("link");
