@@ -1,7 +1,10 @@
 module.exports = {
-  type: 'web-module',
+  type: "web-module",
   npm: {
     esModules: true,
-    umd: false
+    umd: {
+      global: "screenshotit",
+      externals: {}
+    }
   }
-}
+};
