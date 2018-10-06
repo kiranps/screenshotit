@@ -1,0 +1,18 @@
+.git/
+
+# for npm
+node_modules/
+npm-shrinkwrap.json
+
+# codes
+tests/
+
+# misc
+demo/
+.gitignore
+.editorconfig
+.vscode
+.travis.yml
+nwb.config.js
+npm-debug.log
+yarn-error.log
