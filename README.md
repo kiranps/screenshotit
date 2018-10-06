@@ -30,14 +30,6 @@ screenshotit(props).then(function(image) {
 
 ```
 
-# Running the tests
-
-Explain how to run the automated tests for this system
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
 ## Contributing
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
