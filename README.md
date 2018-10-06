@@ -20,3 +20,32 @@ Screenshotit is a javascript library for taking screenshot of current state of w
 ```
 npm install screenshotit
 ```
+
+### Usage
+
+```js
+screenshotit(props).then(function(image) {
+  // handle image
+});
+
+```
+
+# Running the tests
+
+Explain how to run the automated tests for this system
+
+## Deployment
+
+Add additional notes about how to deploy this on a live system
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* [puppeteer](https://github.com/GoogleChrome/puppeteer)
