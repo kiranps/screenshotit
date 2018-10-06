@@ -17,18 +17,10 @@ const removeScripts = node => {
   return node;
 };
 
-const removeHref = node => {
-  const r = node.getElementsByTagName("a");
-  for (var i = r.length - 1; i >= 0; i--) {
-    r[i].removeAttribute("href");
-  }
-  return node;
-};
-
 const cloneDocument = () => {
   const documentClone = document.cloneNode(true);
   const styles = convertStyleSheetToCss(document);
-  const newDocument = removeHref(removeStyles(removeScripts(documentClone)))
+  const newDocument = removeStyles(removeScripts(documentClone))
     .documentElement;
   appendToHead(newDocument, styleTag(styles));
   const origin = window.location.origin;
