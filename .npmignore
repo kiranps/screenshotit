@@ -9,6 +9,7 @@ tests/
 
 # misc
 demo/
+coverage/
 .gitignore
 .editorconfig
 .vscode
