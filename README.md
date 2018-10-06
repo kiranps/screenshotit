@@ -6,14 +6,15 @@
 
 Screenshotit is a javascript library for taking screenshot of current state of webpage. It uses [screenshotit-server](https://github.com/kiranps/screenshotit-server) for taking screenshot which is build on top of [puppeteer](https://github.com/GoogleChrome/puppeteer)
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
+[build-badge]: https://img.shields.io/travis/kiranps/screenshotit/master.png?style=flat-square
+[build]: https://travis-ci.org/kiranps/screenshotit
 
 [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
+[npm]: https://www.npmjs.org/package/screenshotit
 
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+[coveralls-badge]: https://img.shields.io/coveralls/kiranps/screenshotit/master.png?style=flat-square
+[coveralls]: https://coveralls.io/gh/kiranps/screenshotit
+
 
 ### Installing
 
