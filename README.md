@@ -15,14 +15,22 @@ Screenshotit is a javascript library for taking screenshot webpage. Unlike takin
 
 ### Installing
 
+Using npm:
+
 ```
 npm install screenshotit
+```
+
+Using cdn:
+
+```html
+<script src="https://unpkg.com/screenshotit/umd/screenshotit.min.js"></script>
 ```
 
 ### Usage
 
 ```js
-screenshotit(props).then(function(image) {
+screenshotit(props).then(function(imageBlob) {
   // handle image
 });
 ```
