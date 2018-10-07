@@ -8968,20 +8968,6 @@ typography-normalize@^0.14.0:
   resolved "https://registry.yarnpkg.com/typography-normalize/-/typography-normalize-0.14.0.tgz#1d77c1fe2aaf4a51b3673c4c85c85a65a2d4b573"
   integrity sha1-HXfB/iqvSlGzZzxMhchaZaLUtXM=
 
-typography-theme-bootstrap@^0.16.7:
-  version "0.16.7"
-  resolved "https://registry.yarnpkg.com/typography-theme-bootstrap/-/typography-theme-bootstrap-0.16.7.tgz#53681247ae5b2bbad642d1d83fb1951377e47888"
-  integrity sha512-eEA4R6S7SCZdgVC1FQZ1VvG8hE1+Waqfis1Rj7TjjtcjXhyAQNY/bGFTeyoDH910c38cUYlb1hXhABgpOP5Lag==
-  dependencies:
-    gray-percentage "^2.0.0"
-
-typography-theme-github@^0.15.10:
-  version "0.15.10"
-  resolved "https://registry.yarnpkg.com/typography-theme-github/-/typography-theme-github-0.15.10.tgz#64ada39722e2e23c820db8a08fcca84f4e704309"
-  integrity sha1-ZK2jlyLi4jyCDbigj8yoT05wQwk=
-  dependencies:
-    gray-percentage "^2.0.0"
-
 typography-theme-judah@^0.15.10:
   version "0.15.10"
   resolved "https://registry.yarnpkg.com/typography-theme-judah/-/typography-theme-judah-0.15.10.tgz#d373037d5de56c88c895c8df2877f0ba9609c6c3"
