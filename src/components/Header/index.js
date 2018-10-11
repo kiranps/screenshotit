@@ -36,34 +36,21 @@ const NavWrapper = styled.div`
 `
 
 const UL = styled.div`
-  @media screen and (min-width: 53.75em) {
-    display: inline;
-    margin: 0;
-    padding: 0;
-  }
-
-  -webkit-transform-style: preserve-3d;
-  clear: both;
-  display: none;
-  margin: 0 auto;
-  overflow: visible;
+  display: inline;
+  margin: 0;
   padding: 0;
-  width: 100%;
-  z-index: 9999;
-  list-style-type: none;
 `
 
 const LI = styled.li`
-  @media screen and (min-width: 53.75em) {
-    background: transparent;
-    display: inline;
-    line-height: 80px;
-    text-decoration: none;
-    width: auto;
-    padding-right: 30px;
-  }
+  background: transparent;
+  display: inline;
+  line-height: 80px;
+  text-decoration: none;
+  width: auto;
+  padding-right: 30px;
 
   > a {
+    text-decoration: none;
     color: rgba(0, 0, 0, 0.7);
     display: inline-block;
   }
