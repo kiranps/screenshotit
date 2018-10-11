@@ -9,6 +9,7 @@ const Footer = styled.footer`
   bottom:0;
   text-align: center;
   font-size: 13px;
+  color: rgba(51, 51, 51, 0.2);
 `
 
 export default ({size}) => (
