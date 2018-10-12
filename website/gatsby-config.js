@@ -2,6 +2,7 @@ module.exports = {
   pathPrefix: `/screenshotit`,
   siteMetadata: {
     title: 'Gatsby Default Starter',
+    siteUrl: `https://codeheroin.com/screenshotit`,
   },
   plugins: [
     'gatsby-plugin-react-helmet', 
@@ -12,5 +13,15 @@ module.exports = {
         pathToConfigModule: 'src/utils/typography.js',
       }
     },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+          trackingId: 'UA-97369059-1'
+      }
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {}
+    }
   ]
 }

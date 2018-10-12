@@ -6,7 +6,9 @@ import Prism from '../Prism'
 const CODE_SHELL = `npm install --save screenshotit`
 
 const CODE_JS = 
-`screenshotit(options).then(function(image) {
+`import screenshotit from "screenshotit";
+
+screenshotit(options).then(function(image) {
   // handle image
 })`
 
