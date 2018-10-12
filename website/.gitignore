@@ -4,6 +4,7 @@
 /lib
 /node_modules
 /umd
-/website/node_modules/*
+/public
+.cache
 npm-debug.log*
 yarn-error.log*
